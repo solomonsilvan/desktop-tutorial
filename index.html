@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+</head>
+<body>
+    <form>
+        <input type="email" placeholder="Username" id="email" required><br>
+        <input type="password" placeholder="Password" id="password" required><br>
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <script>
+        function login(){
+            // Get values of email and password
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Check if email and password are correct
+            if (email === 'solo@123' && password === 'jkl') {
+                window.location.href = 'https://github.com/';
+            } else if (email === '' || password === '') {
+                alert('Please enter both username and password.');
+            } else {
+                alert('Invalid username or password.');
+            }
+        }
+    </script>
+</body>
+</html>
